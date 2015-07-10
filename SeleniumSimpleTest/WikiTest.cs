@@ -46,6 +46,9 @@ namespace SeleniumSimpleTest
         [TestMethod]
         public void German_Translated_Version_Exist()
         {
+            // coming to Einstein English Bio Page
+            DoSearch();   
+            // Getting German Link of Bio
             GetPageByLanguage("de");
             IWebElement titleElement = FindElementById(_titleElementId);
             Assert.AreEqual("de", titleElement.GetAttribute("lang"));
